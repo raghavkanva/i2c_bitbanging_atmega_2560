@@ -9,7 +9,7 @@ The implementation does not use hardware I2C peripherals or Arduino Wire librari
 
 ## Introduction
 
-This project helped me understand how I2C communication protocol behaves at the system and signal level. By implementing I²C using GPIO and validating it with a logic analyzer, I learned how software logic, timing, and physical setup together determine correct system behavior—an important perspective for system-level and TM work.”
+This project helped me understand how I2C communication protocol behaves at the system and signal level. By implementing I²C using GPIO and validating it with a logic analyzer, I learned how software logic, timing, and physical setup together determine correct system behavior
 
 ---
 
