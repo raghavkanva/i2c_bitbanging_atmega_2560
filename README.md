@@ -7,6 +7,12 @@ The implementation does not use hardware I2C peripherals or Arduino Wire librari
 
 ---
 
+## Introduction
+
+This project helped me understand how I2C communication protocol behaves at the system and signal level. By implementing I²C using GPIO and validating it with a logic analyzer, I learned how software logic, timing, and physical setup together determine correct system behavior—an important perspective for system-level and TM work.”
+
+---
+
 ## Description
 
 - I2C protocol implemented in software using GPIO control - bit banging method
@@ -65,6 +71,17 @@ I2C bus activity was captured using a logic analyzer to observe:
 - Acknowledge bits
 
 This confirms correct protocol sequencing at the signal level.
+
+---
+## Debugging & System Learnings
+
+During validation of the software-implemented I²C bus, initial logic analyzer captures showed incorrect signal behavior, even though the software logic appeared correct. Instead of changing the code immediately, the debugging approach focused on isolating system-level factors.
+
+By examining the physical measurement setup, it was observed that longer logic-analyzer probe wires introduced distortion in the captured signals. When the probe connections were shortened and the setup improved, the I²C waveforms matched the expected START, address, data, and ACK sequences.
+
+This debugging process highlighted that observed behavior in embedded systems is influenced not only by software logic, but also by physical setup and measurement methodology. The key learning was the importance of validating assumptions at the system level before modifying implementation.
+
+This experience highlighted that hardware demonstrations require careful attention to setup and measurement, since these directly influence how system behavior is observed and explained.
 
 ---
 
