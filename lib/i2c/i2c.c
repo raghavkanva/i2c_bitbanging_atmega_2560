@@ -51,7 +51,7 @@ void write_bit(bool input){
   //Make the SCL high 
   scl_high();
 
-  //Wait till SCL is high in the slave (Clock Stretching Concept)
+  //Wait till SCL is high  (Clock Stretching Concept)
   wait_scl_high();   
 
   /* Wait for next half Cycle (~5us in I2C Standard Mode)
@@ -113,6 +113,9 @@ void start(void){
 
   //Therefore, release both SDA and SCl pins
   scl_high();
+
+  //Wait till SCL is high  (Clock Stretching Concept)
+  wait_scl_high()
   
   //Wait for next half cycle 
   delay_micro(5);
