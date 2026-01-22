@@ -144,6 +144,8 @@ void start(void){
 void stop(void){
   /* To generate an I²C STOP condition, the master must
      transition the bus from an active state to the IDLE state.
+
+     SDA must transition from LOW to HIGH while SCL is HIGH for a STOP Condition
      
      In I²C, IDLE means both SCL and SDA are released (Hi-Z)
      and pulled HIGH by the external pull-up resistors. */
