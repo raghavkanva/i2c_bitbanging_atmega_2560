@@ -46,7 +46,7 @@ void write_bit(bool input){
 
   /* Wait for next half Cycle (~5us in I2C Standard Mode)
     This is the setup time - the time in which the SDA makes the data stable*/
-  delay_micro(1); //Setup time
+  delay_micro(5); //Setup time
 
   //Make the SCL high 
   scl_high();
@@ -56,7 +56,7 @@ void write_bit(bool input){
 
   /* Wait for next half Cycle (~5us in I2C Standard Mode)
     This is the hold time - the time in which the SDA makes the data stable*/
-  delay_micro(1); //Hold time
+  delay_micro(5); //Hold time
   
   //Drive the SCL low
   scl_low();
